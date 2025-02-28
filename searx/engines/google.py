@@ -260,6 +260,7 @@ def request(query, params):
     # pylint: disable=line-too-long
     offset = (params['pageno'] - 1) * 10
     google_info = get_google_info(params, traits)
+    query = f"site:docs.aws.amazon.com {query}"
 
     # https://www.google.de/search?q=corona&hl=de&lr=lang_de&start=0&tbs=qdr%3Ad&safe=medium
     query_url = (
